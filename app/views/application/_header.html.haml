@@ -1,7 +1,15 @@
-%header.header
+%header#header
   .logo
     %span.word_1 joyce
     %span.word_2 of
     %span.word_3 all
     %span.word_4 trades.
-  THIS IS THE HEADER
+  
+  .menu_icon
+
+  .menu_items
+    .menu_item= link_to 'Menu', root_path
+    .menu_item= link_to 'About', root_path
+    .menu_item= link_to 'Work', root_path
+    .menu_item= link_to 'Play', plays_path
+    .menu_item= link_to 'Process', about_path

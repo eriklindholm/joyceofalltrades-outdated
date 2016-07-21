@@ -1,0 +1,10 @@
+#play_wrapper
+  = render 'title'
+
+  %h2= @play.name
+  %p= @play.tagline
+
+  .banner
+    = image_tag @play.main_image
+  .play_content
+    = raw @play.body
