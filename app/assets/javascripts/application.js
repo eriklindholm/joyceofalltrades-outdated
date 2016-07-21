@@ -25,4 +25,11 @@ function init() {
     $('body').toggleClass('menu_open')
   });
 
+  $('.logo').on('mouseenter', function(){
+    $('body').addClass('logo_hover');
+  });
+  $('.logo').on('mouseleave', function(){
+    $('body').removeClass('logo_hover');
+  });
+
 }
