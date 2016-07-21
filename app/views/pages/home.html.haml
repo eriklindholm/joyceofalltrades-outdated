@@ -1,2 +1,25 @@
-%h1 Pages#home
-%p Find me in app/views/pages/home.html.haml
+#home_page_wrapper
+  //#home_red_layer
+  //#home_white_layer
+  #home_white_centre
+  .home_links
+
+    .about_home_link
+      = link_to 'about', pages_about_path
+      .spacer_div
+      %h2 joyce
+
+    .journal_home_link
+      %h2 of
+      .spacer_div
+      = link_to 'journal', blogs_path
+
+    .play_home_link
+      = link_to 'play', '#'
+      .spacer_div
+      %h2 all
+
+    .work_home_link
+      %h2 trades
+      .spacer_div
+      = link_to 'work', projects_path
