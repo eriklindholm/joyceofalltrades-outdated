@@ -19,4 +19,10 @@ $(window).on('ready load page:load', init);
 
 function init() {
   $('.freeflow_container').masonry({ itemSelector: '.freeflow_item' });
+
+    
+  $('.menu_icon').on('click', function(){
+    $('body').toggleClass('menu_open')
+  });
+
 }
