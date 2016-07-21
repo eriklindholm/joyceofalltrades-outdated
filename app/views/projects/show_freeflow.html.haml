@@ -1,0 +1,8 @@
+.project_page_container.freeflow_container
+  .freeflow_item= image_tag @project.main_image
+  .freeflow_item.content
+    .tag_list
+      = @project.tags.join ' - '
+    = raw @project.body
+  - @project.project_images.each do |project_image|
+    .freeflow_item= image_tag project_image.image

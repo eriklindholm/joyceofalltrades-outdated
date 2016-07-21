@@ -1,0 +1,19 @@
+%h2 Journal
+#page_wrapper
+  .left_column
+    .blog_title
+      %h1= @blog.name
+    .blog_tagline
+      %p= @blog.tagline
+    .blog_date
+      %p= @blog.created_at
+  .main
+    .banner
+      = image_tag @blog.image
+    .blog_content
+      = raw @blog.body
+
+  .right_column
+    = link_to 'Overview', blogs_path
+    = link_to 'Next', @blog.next_blog if @blog.next_blog
+    = link_to 'Last', @blog.previous_blog if @blog.previous_blog

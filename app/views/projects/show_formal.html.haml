@@ -1,0 +1,10 @@
+.project_page_container
+  .banner
+    = image_tag @project.main_image
+  .tag_list
+    = @project.tags.join ' - '
+  .project_content
+    = raw @project.body
+  .project_images_list
+    - @project.project_images.each do |project_image|
+      .project_image= image_tag project_image.image

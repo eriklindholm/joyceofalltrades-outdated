@@ -1,0 +1,5 @@
+- @blogs.each do |blog|
+  = render "teaser_#{blog.teaser_type}", blog: blog
+
+.blog_tag_list
+  %ul= list_of @blogs.tags
