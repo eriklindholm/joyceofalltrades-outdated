@@ -1,0 +1,22 @@
+.about_page_wrapper
+  min-height: 100vh
+  .page_content
+    +flexbox
+    max-width: 1200px
+    margin: 0 auto
+    .left_column, .right_column
+      +flex(0 0 200px)
+      margin-top: 200px
+      .right_column_item
+        margin-bottom: 30px
+    .who_we_are
+      margin-top: 200px
+    .main
+      +flex(1)
+      padding: 0 80px
+      p
+        text-indent: 50px
+        &.no_margin
+          margin: 0
+      .underline
+        border-bottom: 1px solid $color_3

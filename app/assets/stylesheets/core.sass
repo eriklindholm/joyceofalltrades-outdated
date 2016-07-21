@@ -1,4 +1,5 @@
 html
+  background-color: #f2e9e9
   font-family: futwora, Sans-Serif
 
 img
@@ -12,6 +13,38 @@ a
 
 h1, h2, h3, h4, h5, h6, p, li, table
   -webkit-font-smoothing: antialiased
+
+h1
+  span.emphasis
+    color: $color_3
+    display: block
+  font-size: 2.75rem
+
+h3
+  text-transform: uppercase
+  font-size: 1rem
+  letter-spacing: 4px
+  &:after
+    position: relative
+    top: 10px
+    content: ''
+    display: block
+    width: 5px
+    height: 2px
+    background-color: black
+
+p
+  font-size: 1.125rem
+  line-height: 2rem
+
+ul
+  margin: 0
+  padding: 0
+
+li
+  list-style: none
+  font-family: pressura
+  line-height: 1.7rem
 
 @font-face
   font-family: 'apercu_mono'
