@@ -14,5 +14,6 @@ task seed: :environment do
   Rake::Task['seed_tags'].invoke
   Rake::Task['seed_blog_tags'].invoke
   Rake::Task['seed_projects'].invoke
+  Rake::Task['seed_plays'].invoke
 
 end

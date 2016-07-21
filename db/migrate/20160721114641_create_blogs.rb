@@ -3,7 +3,7 @@ class CreateBlogs < ActiveRecord::Migration[5.0]
     create_table :blogs do |t|
       t.string :name
       t.text :body
-      t.string :image
+      t.string :main_image
       t.string :tagline
 
       #standard_teaser
