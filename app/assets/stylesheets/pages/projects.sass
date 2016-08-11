@@ -8,6 +8,25 @@
   max-width: 500px
   margin: 40px auto
 
+#project_tags
+  text-align: center
+  margin: 30px
+  .project_tag
+    display: inline-block
+    font-family: pressura
+    font-size: 1.1em
+    + .project_tag:before
+      content: ' - '
+    a
+      &:hover
+        text-decoration: none
+      &.filter_selected
+        color: $color_3
+
+#projects_previews
+  max-width: 1600px
+  margin: 0 auto
+
 .project_preview_container
   display: inline-block
   vertical-align: top
@@ -70,11 +89,38 @@
   max-width: 1200px
   margin: 0 auto
 
-.freeflow_container
-  .content
-    padding-top: 100px
-    padding-bottom: 100px
+.freeflow_container .content
+  padding-top: 100px
+  padding-bottom: 100px
+
 .freeflow_item
   width: 600px
   padding: 20px
   box-sizing: border-box
+
+.project_formal
+  .banner
+    height: 500px
+    background-position: 50%
+    background-size: cover
+  .tag_list
+    text-align: center
+    margin: 40px
+    font-family: pressura
+    
+  
+  .project_content
+    max-width: 660px
+    margin: 0 auto
+    text-align: center
+    p
+      font-size: 1.4rem
+  .project_images_list
+    font-size: 0
+    text-align: center
+    max-width: 1000px
+    margin: 30px auto
+  .project_image
+    width: 50%
+    padding: 10px
+    display: inline-block

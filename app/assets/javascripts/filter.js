@@ -20,10 +20,9 @@ $(window).on('load page:load', function(){
   
   $('a[data-filter]').on('click', function() {
     tag = $(this).data('filter');
-    $(this).addClass('filter_selected')
     $('.filter_selected').removeClass('filter_selected')
+    $(this).addClass('filter_selected')
     window.tags = tags
-    console.log(tag)
     tags[tag].addClass('filter_selected')
 
     $('[data-tags]').sort(function(a, b) {

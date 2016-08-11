@@ -9,6 +9,7 @@ task seed_tags: :environment do
   BlogTag.create!(name: 'Archive')
 
 
+  Project.project_addTag()
   ProjectTag.create!(name: 'Branding')
   ProjectTag.create!(name: 'Print')
   ProjectTag.create!(name: 'Digital')

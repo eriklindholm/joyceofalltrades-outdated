@@ -1,6 +1,5 @@
-.project_page_container
-  .banner
-    = image_tag @project.main_image
+.project_page_container.project_formal
+  .banner{style: "background-image: url(#{@project.main_image})"}
   .tag_list
     = @project.tags ' - '
   .project_content

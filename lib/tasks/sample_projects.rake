@@ -1,6 +1,6 @@
 task seed_projects: :environment do
 
-  Project.create!(
+  x = Project.create!(
     name: 'Artel',
     url_alias: 'Artel',
     body: '<p>Branding a little coffee shop on Wensum Street in Norwich. We created a modular Visual Identity including its own set of letter forms, creating a unique and quirky shop experience.</p>',
@@ -10,6 +10,9 @@ task seed_projects: :environment do
     teaser_image: File.open(Rails.root + 'seeds/coffee_teaser.jpg'),
     tags: 'Branding, Print'
     )
+  x.project_images.create!(image: File.open(Rails.root + 'seeds/freeflow_1.jpg'))
+  x.project_images.create!(image: File.open(Rails.root + 'seeds/freeflow_2.jpg'))
+  x.project_images.create!(image: File.open(Rails.root + 'seeds/freeflow_3.jpg'))
 
   x = Project.create!(
     name: 'The Well',
