@@ -18,7 +18,7 @@
 $(window).on('ready load page:load', init);
 
 function init() {
-  
+
   $('.freeflow_container').masonry({ itemSelector: '.freeflow_item' });
 
   $('.menu_icon').on('click', function(){
@@ -36,5 +36,9 @@ function init() {
     $('[data-tab-content]').hide();
     $('[data-tab-content=' + $(this).data('tab-head') + ']').show();
   }).first().click();
+
+  $('[data-url]').on('click', function(){
+    window.location.href = $(this).data('url')
+  })
 
 }
