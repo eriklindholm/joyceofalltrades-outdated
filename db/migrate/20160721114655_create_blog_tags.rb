@@ -1,8 +1,7 @@
 class CreateBlogTags < ActiveRecord::Migration[5.0]
   def change
     create_table :blog_tags do |t|
-      t.belongs_to :blog, foreign_key: true
-      t.belongs_to :tag, foreign_key: true
+      t.string :name
 
       t.timestamps
     end

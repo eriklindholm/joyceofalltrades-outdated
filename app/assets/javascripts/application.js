@@ -20,7 +20,6 @@ $(window).on('ready load page:load', init);
 function init() {
   $('.freeflow_container').masonry({ itemSelector: '.freeflow_item' });
 
-    
   $('.menu_icon').on('click', function(){
     $('body').toggleClass('menu_open')
   });
@@ -31,5 +30,10 @@ function init() {
   $('.logo').on('mouseleave', function(){
     $('body').removeClass('logo_hover');
   });
+
+  $('[data-tab-head]').on('click', function(){
+    $('[data-tab-content]').hide();
+    $('[data-tab-content=' + $(this).data('tab-head') + ']').show();
+  }).first().click();
 
 }

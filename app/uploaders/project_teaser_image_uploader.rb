@@ -47,5 +47,8 @@ class ProjectTeaserImageUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
+  def default_url
+    ActionController::Base.helpers.asset_path("fallback/project_teaser.jpg")
+  end
 
 end

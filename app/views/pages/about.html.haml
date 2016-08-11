@@ -61,10 +61,18 @@
 
     .main
       #about_services
-        = link_to 'Graphic Design', '#'
-        = link_to 'Image Making', '#'
-        = link_to 'Art Direction', '#'
+        = link_to 'Graphic Design', 'javascript: void 0;', data: {tab_head: 'graphic_design'}
+        = link_to 'Image Making', 'javascript: void 0;', data: {tab_head: 'image_making'}
+        = link_to 'Art Direction', 'javascript: void 0;', data: {tab_head: 'art_direction'}
 
-    .right_column
+    .right_column{data: {tab_content: 'graphic_design'}}
+      %h3 Graphic Design
+      %p We design websites, print publications and visual identities that will help your brand to leave a memorable mark. We will help you make your brand come alive.
+
+    .right_column{data: {tab_content: 'image_making'}}
+      %h3 Image Making
+      %p We deliver illustrations that can work within your context or as a stand alone piece. We love to create bespoke imagery and textures for the projects that we work on, be it editorial or infographics.
+
+    .right_column{data: {tab_content: 'art_direction'}}
       %h3 Art Direction
       %p Photography and film are powerful ways to tell your story and/or define the voice of your brand. We collaborate with photographers and videographers to bring your vision to life creatively.

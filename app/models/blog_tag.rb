@@ -1,6 +1,10 @@
 class BlogTag < ApplicationRecord
 
-  belongs_to :blog
-  belongs_to :tag
+  has_many :blog_taggings
+  has_many :blogs, through: :blog_taggings
+
+  def self.cleanup
+    #TODO delete unused tags
+  end
 
 end

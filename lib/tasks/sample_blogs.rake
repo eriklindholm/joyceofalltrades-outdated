@@ -12,7 +12,8 @@ task seed_blogs: :environment do
         it, but looking at this place, it doesn’t seem bad at all to keep them white for a little
         while longer. I like the lightness of this place a lot. Small spaces like this will look way
         more spacious when everything is kept in light colors, especially the walls. I’m very</p>',
-    teaser_type: 'with_introduction'
+    teaser_type: 'with_introduction',
+    tags: 'tag 1, tag 2'
   )
 
   Blog.create!(
@@ -20,7 +21,8 @@ task seed_blogs: :environment do
     tagline: 'Collaborating with XYZ we brought sexy back to the UEA Sportspark',
     main_image: File.open(Rails.root + 'seeds/coffee_shop.jpg'),
     body: '<p>Lorem ipsum Labore magna ullamco ea reprehenderit Excepteur sint in eu fugiat quis velit proident ex amet Ut sint culpa nisi quis officia sunt exercitation Duis sed do sint sint velit reprehenderit Excepteur consectetur sit sunt minim.</p>',
-    teaser_type: 'standard'
+    teaser_type: 'standard',
+    tags: 'taggin 3, second'
   )
 
   Blog.create!(
@@ -28,7 +30,8 @@ task seed_blogs: :environment do
     tagline: 'Collaborating with XYZ we brought sexy back to the UEA Sportspark',
     main_image: File.open(Rails.root + 'seeds/coffee_shop.jpg'),
     body: '<p>Lorem ipsum Labore magna ullamco ea reprehenderit Excepteur sint in eu fugiat quis velit proident ex amet Ut sint culpa nisi quis officia sunt exercitation Duis sed do sint sint velit reprehenderit Excepteur consectetur sit sunt minim.</p>',
-    teaser_type: 'standard'
+    teaser_type: 'standard',
+    tags: 'a blog'
   )
 
   Blog.create!(
@@ -37,7 +40,8 @@ task seed_blogs: :environment do
     teaser_image: File.open(Rails.root + 'seeds/image_with_title.jpg'),
     main_image: File.open(Rails.root + 'seeds/coffee_shop.jpg'),
     body: '<p>Lorem ipsum Labore magna ullamco ea reprehenderit Excepteur sint in eu fugiat quis velit proident ex amet Ut sint culpa nisi quis officia sunt exercitation Duis sed do sint sint velit reprehenderit Excepteur consectetur sit sunt minim.</p>',
-    teaser_type: 'image_with_title'
+    teaser_type: 'image_with_title',
+    tags: 'tag 1, taggin 3'
   )
 
   Blog.create!(
@@ -46,7 +50,8 @@ task seed_blogs: :environment do
     teaser_image: File.open(Rails.root + 'seeds/image_only.jpg'),
     main_image: File.open(Rails.root + 'seeds/coffee_shop.jpg'),
     body: '<p>Lorem ipsum Labore magna ullamco ea reprehenderit Excepteur sint in eu fugiat quis velit proident ex amet Ut sint culpa nisi quis officia sunt exercitation Duis sed do sint sint velit reprehenderit Excepteur consectetur sit sunt minim.</p>',
-    teaser_type: 'image_only'
+    teaser_type: 'image_only',
+    tags: 'a blog'
   )
 
 

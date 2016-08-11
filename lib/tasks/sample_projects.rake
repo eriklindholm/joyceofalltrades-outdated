@@ -6,7 +6,8 @@ task seed_projects: :environment do
     product: 'coffee shop',
     main_image: File.open(Rails.root + 'seeds/coffee_shop.jpg'),
     layout: 'formal',
-    teaser_image: File.open(Rails.root + 'seeds/coffee_teaser.jpg')
+    teaser_image: File.open(Rails.root + 'seeds/coffee_teaser.jpg'),
+    tags: 'Branding, Print'
     )
 
   x = Project.create!(
@@ -14,7 +15,8 @@ task seed_projects: :environment do
     body: '<p>Branding a little coffee shop on Wensum Street in Norwich. We created a modular Visual Identity including its own set of letter forms, creating a unique and quirky shop experience.</p>',
     product: 'Spa Magazine',
     main_image: File.open(Rails.root + 'seeds/coffee_shop.jpg'),
-    layout: 'freeflow'
+    layout: 'freeflow',
+    tags: 'Print, Digital'
     )
   x.project_images.create!(image: File.open(Rails.root + 'seeds/freeflow_1.jpg'))
   x.project_images.create!(image: File.open(Rails.root + 'seeds/freeflow_2.jpg'))
@@ -25,7 +27,8 @@ task seed_projects: :environment do
     body: '<p>Branding a little coffee shop on Wensum Street in Norwich. We created a modular Visual Identity including its own set of letter forms, creating a unique and quirky shop experience.</p>',
     product: 'Website',
     main_image: File.open(Rails.root + 'seeds/coffee_shop.jpg'),
-    layout: 'formal'
+    layout: 'formal',
+    tags: 'Digital, Image Making'
     )
 
   Project.create!(
@@ -33,7 +36,8 @@ task seed_projects: :environment do
     body: '<p>Branding a little coffee shop on Wensum Street in Norwich. We created a modular Visual Identity including its own set of letter forms, creating a unique and quirky shop experience.</p>',
     product: 'iPad text book',
     main_image: File.open(Rails.root + 'seeds/coffee_shop.jpg'),
-    layout: 'formal'
+    layout: 'formal',
+    tags: 'Branding'
     )
 
   Project.create!(
@@ -41,7 +45,8 @@ task seed_projects: :environment do
     body: '<p>Branding a little coffee shop on Wensum Street in Norwich. We created a modular Visual Identity including its own set of letter forms, creating a unique and quirky shop experience.</p>',
     product: 'Degree Publication',
     main_image: File.open(Rails.root + 'seeds/coffee_shop.jpg'),
-    layout: 'formal'
+    layout: 'formal',
+    tags: 'Print, Digital, Art decoration, Image making'
     )
 
   Project.create!(

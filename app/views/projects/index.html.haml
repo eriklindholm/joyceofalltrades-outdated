@@ -2,12 +2,9 @@
   #projects_intro
     We work both with individuals and businesses. Some text that introduces work section. We work both with individuals and businesses.
   #project_tags
-    - Tag.all.each do |tag|
+    - ProjectTag.pluck(:name).each do |tag|
       .project_tag
-        = link_to tag.name, tag.name
+        = link_to tag, 'javascript: void 0;', data: {filter: tag}
   #projects_previews
-    - @projects.each do |project|
-      .project_preview_container
-        .project_preview{style: "background-image: url(#{project.teaser_image})"}
-          %h3= project.name
-          %p.mono= project.product
+    = render partial: 'teaser', collection: @projects, as: :project
+      

@@ -1,11 +1,11 @@
 - provide :body_classes, 'menu_open blog_page'
 
 #blog_previews
-  - @blogs.each do |blog|
-    .blog_preview_content_wrapper
+  - @blogs.each_with_index do |blog, i|
+    .blog_preview_content_wrapper{data: {tags: blog.tags, filter_order: i}}
       = render "teaser_#{blog.teaser_type}", blog: blog
 
 .blog_tag_list
   %ul
-    - Tag.all.each do |tag|
-      %li= link_to tag.name, tag.name
+    - BlogTag.pluck(:name).each do |tag|
+      %li= link_to tag, 'javascript: void 0;', data: {filter: tag}

@@ -5,8 +5,26 @@ class Blog < ApplicationRecord
   mount_uploader :main_image, BlogImageUploader
   mount_uploader :teaser_image, BlogTeaserImageUploader
 
-  has_many :blog_tags
-  has_many :tags, through: :blog_tags
+  has_many :blog_taggings
+  has_many :blog_tags, through: :blog_taggings
+
+
+  def tags
+    blog_tags.pluck(:name).join ', '
+  end
+
+  def tags= val
+    blog_taggings.delete_all
+    (val || '').split(',').each do |tag|
+      add_tag tag
+    end
+    BlogTag.cleanup
+  end
+
+  def add_tag name
+    blog_tags << BlogTag.find_or_create_by(name: name.strip)
+  end
+
 
 
   def previous_blog

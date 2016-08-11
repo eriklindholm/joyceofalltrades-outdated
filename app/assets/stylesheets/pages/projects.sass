@@ -32,3 +32,32 @@
     background-size: cover
     background-position: 50%
     background-color: #730E15
+    position: relative
+
+  
+  .project_preview_underlays
+    position: absolute
+    height: 100%
+    width: 100%
+    top: 0
+    overflow: hidden
+
+    .white_rock
+      position: absolute
+      height: 100%
+      width: 100%
+      background-color: rgba(white, 0.3)
+    .pink_rock
+      position: absolute
+      height: 100%
+      width: 100%
+      background-color: rgba(pink, 0.3)
+
+  &.filter_selected .white_rock
+    display: none
+  &:not(.filter_selected) .pink_rock
+    display: none
+
+  .project_preview_content
+    position: relative
+    z-index: 10

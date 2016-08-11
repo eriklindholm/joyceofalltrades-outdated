@@ -1,6 +1,11 @@
 class ProjectTag < ApplicationRecord
   
-  belongs_to :project
-  belongs_to :tag
+  has_many :project_taggings
+  has_many :projects, through: :project_taggings
+
+
+  def self.cleanup
+    #TODO delete unused tags
+  end
 
 end
