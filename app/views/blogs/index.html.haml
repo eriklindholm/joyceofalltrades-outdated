@@ -2,7 +2,7 @@
 
 #blog_previews
   - @blogs.each_with_index do |blog, i|
-    .blog_preview_content_wrapper{data: {tags: blog.tags, filter_order: i}}
+    .blog_preview_content_wrapper{data: {tags: blog.tags, filter_order: i, url: blog_path(blog)}, style: "top: #{rand(-40..40)}px; left: #{rand(-40..40)}px" }
       = render "teaser_#{blog.teaser_type}", blog: blog
 
 .blog_tag_list
