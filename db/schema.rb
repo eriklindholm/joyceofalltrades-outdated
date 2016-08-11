@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20160811104008) do
     t.string   "teaser_text"
     t.string   "teaser_intro"
     t.string   "teaser_image"
+    t.string   "url_alias"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end
@@ -83,6 +84,7 @@ ActiveRecord::Schema.define(version: 20160811104008) do
     t.string   "main_image"
     t.string   "teaser_image"
     t.integer  "layout",       default: 0
+    t.string   "url_alias"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end

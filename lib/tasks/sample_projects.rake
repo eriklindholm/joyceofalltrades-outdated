@@ -2,6 +2,7 @@ task seed_projects: :environment do
 
   Project.create!(
     name: 'Artel',
+    url_alias: 'Artel',
     body: '<p>Branding a little coffee shop on Wensum Street in Norwich. We created a modular Visual Identity including its own set of letter forms, creating a unique and quirky shop experience.</p>',
     product: 'coffee shop',
     main_image: File.open(Rails.root + 'seeds/coffee_shop.jpg'),
@@ -12,6 +13,7 @@ task seed_projects: :environment do
 
   x = Project.create!(
     name: 'The Well',
+    url_alias: 'The Well',
     body: '<p>Branding a little coffee shop on Wensum Street in Norwich. We created a modular Visual Identity including its own set of letter forms, creating a unique and quirky shop experience.</p>',
     product: 'Spa Magazine',
     main_image: File.open(Rails.root + 'seeds/coffee_shop.jpg'),
@@ -24,6 +26,7 @@ task seed_projects: :environment do
 
   Project.create!(
     name: 'CD2',
+    url_alias: 'CD2',
     body: '<p>Branding a little coffee shop on Wensum Street in Norwich. We created a modular Visual Identity including its own set of letter forms, creating a unique and quirky shop experience.</p>',
     product: 'Website',
     main_image: File.open(Rails.root + 'seeds/coffee_shop.jpg'),
@@ -33,6 +36,7 @@ task seed_projects: :environment do
 
   Project.create!(
     name: 'Making Mountains',
+    url_alias: 'Making Mountains',
     body: '<p>Branding a little coffee shop on Wensum Street in Norwich. We created a modular Visual Identity including its own set of letter forms, creating a unique and quirky shop experience.</p>',
     product: 'iPad text book',
     main_image: File.open(Rails.root + 'seeds/coffee_shop.jpg'),
@@ -42,6 +46,7 @@ task seed_projects: :environment do
 
   Project.create!(
     name: 'Fine Art Catalogue',
+    url_alias: 'Fine Art Catalogue',
     body: '<p>Branding a little coffee shop on Wensum Street in Norwich. We created a modular Visual Identity including its own set of letter forms, creating a unique and quirky shop experience.</p>',
     product: 'Degree Publication',
     main_image: File.open(Rails.root + 'seeds/coffee_shop.jpg'),
@@ -51,6 +56,7 @@ task seed_projects: :environment do
 
   Project.create!(
     name: 'The Unique Mind of Alexandra Mackie',
+    url_alias: 'The Unique Mind of Alexandra Mackie',
     body: '<p>Branding a little coffee shop on Wensum Street in Norwich. We created a modular Visual Identity including its own set of letter forms, creating a unique and quirky shop experience.</p>',
     product: 'Degree Publication',
     main_image: File.open(Rails.root + 'seeds/coffee_shop.jpg'),

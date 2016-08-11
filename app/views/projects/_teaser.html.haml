@@ -3,6 +3,7 @@
     .project_preview_underlays
       .white_rock
       .pink_rock
-    .project_preview_content  
-      %h3= project.name
-      %p.mono= project.product
+    = link_to project do
+      .project_preview_content  
+        %h3= project.name
+        %p.mono= project.product

@@ -2,7 +2,7 @@
   .banner
     = image_tag @project.main_image
   .tag_list
-    = @project.tags.join ' - '
+    = @project.tags ' - '
   .project_content
     = raw @project.body
   .project_images_list

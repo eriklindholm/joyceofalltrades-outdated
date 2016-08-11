@@ -8,10 +8,15 @@ class Blog < ApplicationRecord
   has_many :blog_taggings
   has_many :blog_tags, through: :blog_taggings
 
+  validates :name, :url_alias, presence: true
 
-  def tags
-    blog_tags.pluck(:name).join ', '
+  def tags sep=', '
+    blog_tags.pluck(:name).join sep
   end
+
+  include FriendlyId
+  friendly_id :url_alias
+
 
   def tags= val
     blog_taggings.delete_all
@@ -35,5 +40,9 @@ class Blog < ApplicationRecord
     self.class.where("created_at > ?", created_at).order("created_at asc").first
   end
 
+
+  def url_alias= val
+    super val.to_s.parameterize
+  end
 
 end

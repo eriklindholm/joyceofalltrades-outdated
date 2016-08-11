@@ -11,6 +11,8 @@ class CreateProjects < ActiveRecord::Migration[5.0]
       #freeflow
       t.integer :layout, default: 0
 
+      t.string :url_alias
+
       t.timestamps
     end
   end

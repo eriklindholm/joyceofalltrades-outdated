@@ -16,6 +16,8 @@ class CreateBlogs < ActiveRecord::Migration[5.0]
       t.string :teaser_intro
       t.string :teaser_image
 
+      t.string :url_alias
+
       t.timestamps
     end
   end
