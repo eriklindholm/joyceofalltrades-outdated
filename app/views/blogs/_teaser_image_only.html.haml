@@ -1,2 +1,7 @@
-.blog_teaser{style: "background-image: url(#{blog.teaser_image})"}
-  .blog_date= blog.created_at
+.blog_preview_wrapper.with_teaser.with_image
+
+  .blog_preview_content{style: "background-image: url(#{blog.teaser_image})"}
+    .text_blog_teaser
+      .blog_preview_image_title
+  .blog_preview_date
+    = blog.created_at.strftime("%D")

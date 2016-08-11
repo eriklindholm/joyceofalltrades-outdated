@@ -1,2 +1,13 @@
-%h1 Blogs#index
-%p Find me in app/views/blogs/index.html.haml
+#projects_container
+  #projects_intro
+    We work both with individuals and businesses. Some text that introduces work section. We work both with individuals and businesses.
+  #project_tags
+    - Tag.all.each do |tag|
+      .project_tag
+        = link_to tag.name, tag.name
+  #projects_previews
+    - @projects.each do |project|
+      .project_preview_container
+        .project_preview{style: "background-image: url(#{project.teaser_image})"}
+          %h3= project.name
+          %p.mono= project.product

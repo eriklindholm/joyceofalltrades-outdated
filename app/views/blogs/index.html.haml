@@ -1,5 +1,11 @@
-- @blogs.each do |blog|
-  = render "teaser_#{blog.teaser_type}", blog: blog
+- provide :body_classes, 'menu_open blog_page'
+
+#blog_previews
+  - @blogs.each do |blog|
+    .blog_preview_content_wrapper
+      = render "teaser_#{blog.teaser_type}", blog: blog
 
 .blog_tag_list
-  %ul= list_of @blogs.tags
+  %ul
+    - Tag.all.each do |tag|
+      %li= link_to tag.name, tag.name

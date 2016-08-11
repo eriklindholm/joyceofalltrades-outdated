@@ -1,0 +1,60 @@
+.blog_page
+  background-color: $color_4
+  background-image: image_url('blog.png')
+  background-size: cover
+  background-position: 50%
+
+#blog_previews
+  max-width: 1200px
+  margin: 0 auto
+  font-size: 0
+.blog_preview_content_wrapper
+  display: inline-block
+  width: 50%
+  font-size: 1rem
+
+.text_blog_teaser
+  h3
+    text-transform: none
+    font-size: 1.1rem
+    letter-spacing: 1px
+    margin-top: 0
+    &:after
+      display: none
+  .mono
+    font-size: 0.875rem
+    line-height: 1.3rem
+  .teaser_text
+    font-size: 0.875rem
+    line-height: 1.4rem
+
+.blog_preview_wrapper
+  +flexbox
+  &.standard
+    max-width: 400px
+  &.with_teaser
+    max-width: 450px
+  &.with_image
+    height: 250px
+    .blog_preview_content
+      background-size: cover
+      background-position: 50%
+      text-align: center
+      h3
+        font-size: 1.6rem
+        padding: 70px 50px
+
+
+  .blog_preview_date
+    +flex(0 0 100px)
+    padding: 0 20px
+  .blog_preview_content
+    +flex(1)
+    padding: 20px
+    background-color: white
+
+.blog_tag_list
+  position: fixed
+  font-size: 0.875rem
+  right: 60px
+  bottom: 40px

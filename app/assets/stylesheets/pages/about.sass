@@ -1,3 +1,8 @@
+.about_page
+  background-image: image_url('about.png')
+  background-size: cover
+  background-position: 50%
+
 .about_page_wrapper
   min-height: 100vh
   .page_content
@@ -6,9 +11,11 @@
     margin: 130px auto 0
     .left_column, .right_column
       +flex(0 0 200px)
-      margin-top: 200px
       .right_column_item
         margin-bottom: 30px
+    &:first-of-type
+      .left_column, .right_column
+        margin-top: 200px
     .who_we_are
       margin-top: 200px
     .main
@@ -20,3 +27,31 @@
           margin: 0
       .underline
         border-bottom: 1px solid $color_3
+
+#about_service_section
+
+  #about_services
+    text-align: center
+    padding-bottom: 100px
+    a
+      display: block
+      font-size: 1.25rem
+      font-weight: 600
+      &:not(:last-child):after
+        content: ""
+        width: 60px
+        height: 8px
+        background-color: black
+        display: block
+        margin: 25px auto
+
+  .right_column
+    padding: 100px 0
+    p
+      list-style: none
+      font-family: pressura
+      line-height: 1.7rem
+      font-size: 1rem
+
+
+

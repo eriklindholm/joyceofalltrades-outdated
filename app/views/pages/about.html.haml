@@ -1,7 +1,8 @@
-- provide :body_classes, 'menu_open'
+- provide :body_classes, 'menu_open about_page'
 
 #page_wrapper.about_page_wrapper
-  .page_content
+  #about_main_section.page_content
+
     .left_column
       .how_we_work
         %h3 How we work
@@ -12,19 +13,21 @@
         %h3 Who we are
         %ul
           %li est. 2015
+
     .main
-      %h1 <span class="emphasis">Good design</span> makes things work.
+      #about_body
+        %h1 <span class="emphasis">Good design</span> makes things work.
 
-      %p.no_margin
-        As a design studio Joyce of all Trades believes effective communication to be a key ingredient for any thriving enterprise. It is simple: You have something amazing that the world needs to know about - and we can help you with that. We offer solutions that are captivating in their presentation, clear in their communication and consistent throughout all applications. We care about uncovering your unique voice, letting it tell your story in the most compelling and engaging way. As we said ... It works.
-      %p.no_margin
-        Joyce of all Trades is a Norwich based studio founded by Joyce in 2015 after graduating from
-        %span.underline Norwich University of the Arts
-        with a degree in Graphic Design, specialising in Design for Publishing. Joyce collaborates closely with a network of creative professionals, which allows us to create awesome results. We have worked with clients from academia, lifestyle brands, charities and entrepreneurs.
+        %p.no_margin
+          As a design studio Joyce of all Trades believes effective communication to be a key ingredient for any thriving enterprise. It is simple: You have something amazing that the world needs to know about - and we can help you with that. We offer solutions that are captivating in their presentation, clear in their communication and consistent throughout all applications. We care about uncovering your unique voice, letting it tell your story in the most compelling and engaging way. As we said ... It works.
+        %p.no_margin
+          Joyce of all Trades is a Norwich based studio founded by Joyce in 2015 after graduating from
+          %span.underline Norwich University of the Arts
+          with a degree in Graphic Design, specialising in Design for Publishing. Joyce collaborates closely with a network of creative professionals, which allows us to create awesome results. We have worked with clients from academia, lifestyle brands, charities and entrepreneurs.
 
 
-      %p.indented
-        %span.underline We would love to work with you.
+        %p.indented
+          %span.underline We would love to work with you.
 
     .right_column
       .right_column_item
@@ -49,3 +52,19 @@
           %li instagram
           %li Karim Skalli
           %li Fosten Doc
+  #about_service_section.page_content
+    .left_column
+      .what_we_do
+        %h3 What we do
+        %ul
+          %li est. 2015
+
+    .main
+      #about_services
+        = link_to 'Graphic Design', '#'
+        = link_to 'Image Making', '#'
+        = link_to 'Art Direction', '#'
+
+    .right_column
+      %h3 Art Direction
+      %p Photography and film are powerful ways to tell your story and/or define the voice of your brand. We collaborate with photographers and videographers to bring your vision to life creatively.

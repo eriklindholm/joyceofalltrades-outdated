@@ -1,3 +1,7 @@
 = render 'title'
-- @plays.each do |play|
-  = render 'teaser', play: play
+#plays_container
+  - @plays.each do |play|
+    .play_teaser
+      = link_to image_tag(play.teaser_image), play
+      %h3= play.name
+      %p.mono= play.tagline

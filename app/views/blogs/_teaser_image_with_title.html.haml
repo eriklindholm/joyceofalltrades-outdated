@@ -1,3 +1,8 @@
-.blog_teaser{style: "background-image: url(#{blog.teaser_image})"}
-  .image_overlay= blog.name
-  .blog_date= blog.created_at
+.blog_preview_wrapper.with_teaser.with_image
+
+  .blog_preview_content{style: "background-image: url(#{blog.teaser_image})"}
+    .text_blog_teaser
+      .blog_preview_image_title
+        %h3= blog.name
+  .blog_preview_date
+    = blog.created_at.strftime("%D")

@@ -18,5 +18,4 @@ class Blog < ApplicationRecord
   end
 
 
-
 end

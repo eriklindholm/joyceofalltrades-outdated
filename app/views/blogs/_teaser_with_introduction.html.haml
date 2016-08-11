@@ -1,5 +1,9 @@
-.blog_teaser
-  %h2= blog.name
-  %p.tagline= blog.tagline
-  %p.tagline= blog.teaser_text
-  .blog_date= blog.created_at
+.blog_preview_wrapper.with_teaser
+  .blog_preview_date
+    = blog.created_at.strftime("%D")
+  .blog_preview_content
+    .text_blog_teaser
+      .text_blog_teaser_inner
+        %h3= blog.name
+        %p.mono= blog.tagline
+        %p.teaser_text= blog.teaser_text
