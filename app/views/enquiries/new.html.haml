@@ -1,0 +1,27 @@
+#enquiries_wrapper
+
+  %h1
+    %span.emphasis If you want to say Hi or get us on board...
+    We're only a message away.
+
+  = form_for @enquiry do |f|
+    
+    - if @enquiry.errors.any?
+      .errors
+        - @enquiry.errors.full_messages.each do |msg|
+          .error= msg
+
+    .field
+      = f.label :name
+      = f.text_field :name, autofocus: true
+
+    .field
+      = f.label :contact
+      = f.text_field :contact
+
+    .field_area
+      = f.label :body, 'Message'
+      = f.text_area :body, class: 'fancy'
+
+    .actions
+      = f.submit 'Submit'

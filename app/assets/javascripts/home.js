@@ -1,19 +1,28 @@
 (function(){
 
-$(window).on('load page:load', function(){
+  $(window).on('load page:load', function(){
 
-  $whiteCenter = $('#home_white_centre') 
-  $red = $('#home_red_back')
-  $white = $('#home_white_back')
+    $whiteCenter = $('#home_white_centre') 
+    $red = $('#home_red_back')
+    $white = $('#home_white_back')
 
 
+    if ($('#home_page_wrapper').length > 0) {
+      $(window).off('mousemove', onMouseMove);
+      $(window).on('mousemove', function(e){
+        onMouseMove(e);
+      });
 
-  if ($('#home_page_wrapper').length > 0) {
-    $(window).on('mousemove', function(e){
-      $whiteCenter.css('background-position', whiteCenterPosition(e.pageX, e.pageY))
-      $red.css('background-position', redPosition(e.pageX, e.pageY))
-      $white.css('background-position', whitePosition(e.pageX, e.pageY))
-    });
+    }
+
+    animateLines()
+  });
+
+
+  function onMouseMove(e){
+    $whiteCenter.css('background-position', whiteCenterPosition(e.pageX, e.pageY))
+    $red.css('background-position', redPosition(e.pageX, e.pageY))
+    $white.css('background-position', whitePosition(e.pageX, e.pageY))
   }
 
   function whiteCenterPosition(x, y) {
@@ -33,7 +42,23 @@ $(window).on('load page:load', function(){
     return x + 'px ' + y + 'px'
   }
 
+///////////////////////////////////////////
 
-});
+  function animateLines() {
+
+    $line1 = $('.about_home_link .spacer_div')
+    $line2 = $('.journal_home_link .spacer_div')
+    $line3 = $('.play_home_link .spacer_div')
+    $line4 = $('.work_home_link .spacer_div')
+
+
+    $('.hidden_for_anim').each(function(i){
+      var _this = this;
+      setTimeout(function(){
+        $(_this).removeClass('hidden_for_anim')
+      }, 400*i+250)
+    });
+  
+  }
 
 })(jQuery)
