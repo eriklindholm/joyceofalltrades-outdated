@@ -20,7 +20,7 @@ $(window).on('ready load page:load', init);
 function init() {
 
   $('.freeflow_container').masonry({ itemSelector: '.freeflow_item' });
-  $('.project_images_list').masonry({ itemSelector: '.project_image', isFitWidth: true  });
+  $('.project_images_list').masonry({ itemSelector: '.project_image' });
 
   $('.menu_icon').on('click', function(){
     $('body').toggleClass('menu_open')
