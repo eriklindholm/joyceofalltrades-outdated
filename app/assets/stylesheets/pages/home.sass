@@ -1,27 +1,6 @@
 #home_page_wrapper
   height: 100vh
-  .home_links
-    max-width: 700px
-    margin: 0 auto
-    padding: 100px
-    position: relative
-
-  .hidden_for_anim
-    .spacer_horizontal .spacer_div_inner
-      width: 0%
-      left: 100%
-
-    .spacer_horizontal_right .spacer_div_inner
-      width: 0%
-      right: 100%
-      
-    .spacer_vertical .spacer_div_inner
-      top: 100%
-      height: 0%
-
-    a
-      opacity: 0
-
+  
   .spacer_div
     height: 5px
     width: 100%
@@ -35,6 +14,11 @@
       height: 250px
       width: 5px
       left: 50%
+    &.spacer_vertical_down
+      height: 250px
+      width: 5px
+      left: 50%
+  
   .spacer_div_inner
     background: black
     width: 100%
@@ -43,45 +27,104 @@
     left: 0
     position: relative
     transition: 1s cubic-bezier(0.9, 0.04, 0.82, 1.07)
+  
+  .hidden_for_anim
+    .spacer_horizontal .spacer_div_inner
+      width: 0%
+      left: 100%
 
-  .about_home_link
-    position: absolute
-    top: 300px
-    left: 0
-  .journal_home_link
-    position: absolute
-    top: 420px
-    left: 165px
-  .play_home_link
-    width: 90px
-    position: absolute
-    left: 490px
+    .spacer_horizontal_right .spacer_div_inner
+      width: 0%
+      right: 100%
+      
+    .spacer_vertical .spacer_div_inner
+      top: 100%
+      height: 0%
+      
+    .spacer_vertical_down .spacer_div_inner
+      height: 0%
+
     a
-      float: right
-      position: relative
-      left: 5px
-    h2
-      text-align: center!important
-      margin-top: 10px!important
+      opacity: 0
+  
+  .home_links
+    max-width: 700px
+    margin: 0 auto
+    padding: 100px
+    position: relative
 
 
-  .work_home_link
-    width: 250px
-    position: absolute
-    top: 460px
-    right: 0
+    .about_home_link
+      position: absolute
+      top: 300px
+      left: 0
+    .journal_home_link
+      position: absolute
+      top: 420px
+      left: 165px
+    .play_home_link
+      width: 90px
+      position: absolute
+      left: 490px
+      a
+        float: right
+        position: relative
+        left: 5px
+      h2
+        text-align: center!important
+        margin-top: 10px!important
+
+
+    .work_home_link
+      width: 250px
+      position: absolute
+      top: 460px
+      right: 0
+      h2
+        text-align: left
+      a
+        float: right
     h2
-      text-align: left
+      margin: 0
+      text-align: right
+      font-size: 2.5rem
     a
-      float: right
-  h2
-    margin: 0
-    text-align: right
-    font-size: 2.5rem
-  a
-    font-family: pressura
-    font-size: 1.1rem
-    transition: 1s 1s
+      font-family: pressura
+      font-size: 1.1rem
+      transition: 1s 1s
+
+  .home_links_mobile
+    max-width: 650px
+    position: relative
+    margin: 0 auto
+    top: 5%
+    .home_white_centre
+      top: 50%
+
+    .home_link
+      width: 90px
+      text-align: center
+      margin-left: -45px
+
+    .about_home_link
+      position: absolute
+      left: 20%
+      top: 70px
+
+    .journal_home_link
+      position: absolute
+      left: 40%
+      top: 120px
+
+    .play_home_link
+      position: absolute
+      left: 60%
+      top: 40px
+
+    .work_home_link
+      position: absolute
+      left: 80%
+      top: 150px
 
 
 
@@ -105,7 +148,7 @@
   position: fixed
   top: 0
   left: 0
-#home_white_centre
+.home_white_centre
   background-image: image-url('WhiteRock_outline.png')
   width: 600px
   height: 500px
@@ -136,3 +179,17 @@
   bottom: 50px
   border-bottom: 3px solid $color_3
   line-height: 1.5em
+
+  @media screen and (max-width: 800px)
+    right: 30px
+    bottom: 30px
+
+
+@media screen and (min-width: 949px)
+  .home_links_mobile
+    display: none
+@media screen and (max-width: 950px)
+  .home_links
+    display: none
+
+        
