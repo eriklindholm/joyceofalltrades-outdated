@@ -6,8 +6,9 @@
         %h1= @blog.name
       .blog_tagline.mono
         %p= @blog.tagline
-      .blog_date
-        %p= @blog.created_at
+      .blog_date.mono
+        %p
+          = @blog.created_at.strftime("#{@blog.created_at.day.ordinalize} %B %Y")
     .main
       .banner
         = image_tag @blog.main_image
