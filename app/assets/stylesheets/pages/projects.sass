@@ -7,6 +7,7 @@
   line-height: 1.7rem
   max-width: 500px
   margin: 40px auto
+  padding: 20px
 
 #project_tags
   text-align: center
@@ -35,6 +36,14 @@
   padding: 20px
   box-sizing: border-box
   text-align: center
+  
+  @media screen and (max-width: 900px)
+    width: 50%
+    padding: 10px
+  @media screen and (max-width: 550px)
+    width: 100%
+
+
   h3
     text-transform: none
     font-size: 1.1rem
@@ -94,9 +103,13 @@
   padding-bottom: 100px
 
 .freeflow_item
-  width: 600px
+  max-width: 600px
+  width: 50%
   padding: 20px
   box-sizing: border-box
+
+  @media screen and (max-width: 600px)
+    width: 100%
 
 .project_formal
   .banner
@@ -120,6 +133,7 @@
   .project_content
     max-width: 660px
     margin: 0 auto
+    padding: 15px
     text-align: center
     p
       font-size: 1.4rem
@@ -137,3 +151,7 @@
     box-sizing: border-box
     padding: 10px
     display: inline-block
+    box-sizing: border-box
+
+    @media screen and (max-width: 600px)
+      width: 100%

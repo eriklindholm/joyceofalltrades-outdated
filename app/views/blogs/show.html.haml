@@ -6,9 +6,10 @@
         %h1= @blog.name
       .blog_tagline.mono
         %p= @blog.tagline
-      .blog_date.mono
+      .blog_date
         %p
-          = @blog.created_at.strftime("#{@blog.created_at.day.ordinalize} %B %Y")
+          = @blog.created_at.strftime("#{@blog.created_at.day.ordinalize} %B")
+          = @blog.created_at.year if @blog.created_at.year != Time.now.year
     .main
       .banner
         = image_tag @blog.main_image

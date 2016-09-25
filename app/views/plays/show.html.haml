@@ -1,14 +1,12 @@
+= render 'title'
 #play_content_wrapper
-  #play_content
-    = render 'title'
+  .show_play_teaser
+    .play_teaser_image
+      = link_to image_tag(@play.teaser_image), @play
+    %h3= @play.name
+    %p.mono= @play.tagline
 
-    .show_play_teaser
-      .play_teaser_image
-        = link_to image_tag(@play.teaser_image), @play
-      %h3= @play.name
-      %p.mono= @play.tagline
-
-    .banner
-      = image_tag @play.main_image
-    .play_content
-      = raw @play.body
+  .banner
+    = image_tag @play.main_image
+  .play_body
+    = raw @play.body

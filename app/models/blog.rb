@@ -9,7 +9,7 @@ class Blog < ApplicationRecord
   has_many :blog_tags, through: :blog_taggings
 
   validates :name, :url_alias, presence: true
-
+  validates :url_alias, uniqueness: true
   def tags sep=', '
     blog_tags.pluck(:name).join sep
   end

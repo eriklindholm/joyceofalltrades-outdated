@@ -29,7 +29,7 @@ task seed_blogs: :environment do
 
   Blog.create!(
     name: 'Retro vibes on the UEA Sport courts',
-    url_alias: 'Retro vibes on the UEA Sport courts',
+    url_alias: 'Retro vibes on the UEA',
     tagline: 'Collaborating with XYZ we brought sexy back to the UEA Sportspark',
     main_image: File.open(Rails.root + 'seeds/coffee_shop.jpg'),
     body: '<p>Lorem ipsum Labore magna ullamco ea reprehenderit Excepteur sint in eu fugiat quis velit proident ex amet Ut sint culpa nisi quis officia sunt exercitation Duis sed do sint sint velit reprehenderit Excepteur consectetur sit sunt minim.</p>',

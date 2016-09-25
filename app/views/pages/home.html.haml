@@ -3,25 +3,59 @@
 #home_page_wrapper
   #home_red_back
   #home_white_back
-  #home_white_centre
   
   .home_links
-    .about_home_link
+    .home_white_centre
+    .about_home_link.hidden_for_anim
       = link_to 'about', about_path
-      .spacer_div
+      .spacer_div.spacer_horizontal
+        .spacer_div_inner
       %h2 joyce
 
-    .journal_home_link
+    .journal_home_link.hidden_for_anim
       %h2 of
-      .spacer_div
+      .spacer_div.spacer_horizontal
+        .spacer_div_inner
       = link_to 'journal', blogs_path
 
-    .play_home_link
+    .play_home_link.hidden_for_anim
       = link_to 'play', plays_path
-      .spacer_div
+      .spacer_div.spacer_vertical
+        .spacer_div_inner
       %h2 all
 
-    .work_home_link
+    .work_home_link.hidden_for_anim
       %h2 trades
-      .spacer_div
+      .spacer_div.spacer_horizontal_right
+        .spacer_div_inner
       = link_to 'work', projects_path
+
+  .home_links_mobile
+    .home_white_centre
+
+    .about_home_link.home_link
+      %h2 joyce
+      .spacer_div.spacer_vertical_down
+        .spacer_div_inner
+      = link_to 'about', about_path
+
+    .journal_home_link.home_link
+      %h2 of
+      .spacer_div.spacer_vertical_down
+        .spacer_div_inner
+      = link_to 'journal', blogs_path
+
+    .play_home_link.home_link
+      %h2 all
+      .spacer_div.spacer_vertical_down
+        .spacer_div_inner
+      = link_to 'play', plays_path
+
+    .work_home_link.home_link
+      %h2 trades
+      .spacer_div.spacer_vertical_down
+        .spacer_div_inner
+      = link_to 'work', projects_path
+
+.contact_link
+  = link_to 'Contact', new_enquiry_path

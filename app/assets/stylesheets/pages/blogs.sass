@@ -17,6 +17,15 @@
   vertical-align: middle
   position: relative
 
+  @media screen and (max-width: 800px)
+    padding: 20px
+    left: 0 !important
+  
+  @media screen and (max-width: 550px)
+    display: block
+    width: auto
+    top: 0 !important
+
 .text_blog_teaser
   h3
     text-transform: none
@@ -44,10 +53,14 @@
       background-size: cover
       background-position: 50%
       text-align: center
+      box-sizing: border-box
+      height: 100%
       h3
         font-size: 1.6rem
         padding: 70px 50px
 
+  @media screen and (max-width: 1000px)
+    display: block
 
   .blog_preview_date
     +flex(0 0 100px)
@@ -73,8 +86,15 @@
     margin: 0
     padding: 10px 0 80px
     border-top: 1px solid black
+
+
+.filter_selected .blog_preview_content
+  border: 2px solid $color_3
+
 .blog_content
   +flexbox
+
+
   .left_column
     +flex(0 0 350px)
     padding-right: 90px
@@ -100,3 +120,44 @@
     box-sizing: border-box
     a
       display: block
+
+@media screen and (max-width: 1200px)
+  .blog_content
+    .left_column
+      +flex(0 0 250px)
+      padding-right: 30px
+
+    .right_column
+      +flex(0 0 100px)
+      padding-left: 30px
+
+@media screen and (max-width: 800px)
+  .blog_content_wrapper h4
+    padding-bottom: 10px
+  .blog_content
+    +flex-direction(column)
+    .left_column
+      +flex(0)
+      padding: 5px
+      +order(2)
+      max-width: 70%
+    .main
+      +order(3)
+    .right_column
+      +order(1)
+      +flex(0)
+      text-align: right
+      height: 0
+      padding: 0 15px
+      margin-top: 20px 
+      margin-bottom: -10px
+  
+@media screen and (max-width: 450px)
+  .blog_content
+    .left_column
+      max-width: 100%
+    .right_column
+      +flex(1, 1, 30px)
+      text-align: center
+      a
+        display: inline-block

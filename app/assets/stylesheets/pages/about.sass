@@ -5,10 +5,34 @@
 
 .about_page_wrapper
   min-height: 100vh
+  padding: 10px 15px
   .page_content
     +flexbox
     max-width: 1200px
     margin: 130px auto 0
+    position: relative
+    @media screen and (max-width: 850px)
+      margin: 50px auto 0
+      +flex-direction(column)
+      .left_column, .right_column
+        margin-top: 30px !important
+      .left_column
+        position: absolute
+        top: 0
+
+      .right_column
+        text-align: right
+        +order(2)
+        h3:after
+          margin-left: auto
+        
+      .main
+        +order(3)
+        
+    @media screen and (max-width: 500px)
+      margin: 0px auto 0
+
+
     .left_column, .right_column
       +flex(0 0 200px)
       .right_column_item
@@ -21,10 +45,19 @@
     .main
       +flex(1)
       padding: 0 80px
+
+      @media screen and (max-width: 1100px)
+        padding: 0 20px
+
       p
         text-indent: 50px
         &.no_margin
           margin: 0
+        a
+          border-bottom: 1px solid $color_3
+          &:hover
+            border-bottom: 2px solid $color_3
+            text-decoration: none
       .underline
         border-bottom: 1px solid $color_3
 
@@ -46,7 +79,6 @@
         margin: 25px auto
 
   .right_column
-    padding: 100px 0
     p
       list-style: none
       font-family: pressura

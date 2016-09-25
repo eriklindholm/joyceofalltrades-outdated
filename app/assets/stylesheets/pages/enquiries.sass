@@ -1,0 +1,97 @@
+#enquiries_wrapper
+  max-width: 520px
+  margin: 0 auto
+
+  h1
+    font-size: 1.5rem
+    line-height: 1.4em  
+    margin-bottom: 50px
+
+  .field
+    border-bottom: 3px solid $color_3
+    margin-bottom: 26px
+    +flexbox
+    +align-items(center)
+    line-height: 1.7em
+    
+  label:after
+    content: ':'
+
+  input[type=text]
+    background: none
+    border: none
+    line-height: 1.7em
+    outline: none
+    +flex-grow(1)
+    margin-left: 8px
+
+
+  .field_area
+    label
+      line-height: 1.7em
+      display: inline-block
+      border-bottom: 3px solid $color_3
+
+
+  textarea
+    background: #f9f5f5
+    border: 2px solid $color_1
+    resize: none
+    margin-top: 1rem
+    width: 100%
+    height: 300px
+
+  .fancyTextBox
+    outline: none
+    margin-top: 1rem
+    min-height: 50px
+    max-height: 300px
+    overflow: auto
+    margin-bottom: 16px
+    
+    &.focused .cursor
+      display: none
+
+  .cursor
+    height: 20px
+    line-height: 20px
+    margin-bottom: -3px
+    background: #333
+    display: inline-block
+    width: 2px
+
+    &.blink
+      visibility: hidden
+  
+  .actions
+    text-align: right
+  input[type=submit]
+    border: 3px solid $color_3
+    background: none
+    padding: 7px 12px
+    font-size: 0.7em
+    -webkit-appearance: none
+    text-transform: uppercase
+  
+
+#thanks_page
+  text-align: center
+  h1
+    border-bottom: 5px solid $color_3
+    display: inline-block
+    position: relative
+    top: 200px
+    a
+      text-decoration: none
+
+    @media screen and (max-height: 600px)
+      top: 100px
+
+    @media screen and (max-height: 300px)
+      top: 20px
+
+.errors
+  margin-bottom: 30px
+  border-left: 3px solid $color_3
+  padding: 20px
+  margin-top: -20px
