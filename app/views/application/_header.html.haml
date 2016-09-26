@@ -4,10 +4,18 @@
     %span.word_2 of
     %span.word_3 all
     %span.word_4 trades.
-  
+
   .menu_icon
 
   .menu_items
+    .menu_item= link_to 'Home', root_path
+    .menu_item= link_to 'About', about_path
+    .menu_item= link_to 'Work', projects_path
+    .menu_item= link_to 'Play', plays_path
+    .menu_item= link_to 'Journal', blogs_path
+    .menu_item= link_to 'Contact', enquiries_path
+
+  .mobile_menu_items
     .menu_item= link_to 'Home', root_path
     .menu_item= link_to 'About', about_path
     .menu_item= link_to 'Work', projects_path

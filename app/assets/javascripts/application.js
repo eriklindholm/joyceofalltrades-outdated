@@ -29,12 +29,14 @@ function init() {
 
 
   $('[data-tab-head]').on('click', function(){
-    $('[data-tab-content]').hide();
-    $('[data-tab-content=' + $(this).data('tab-head') + ']').show();
+    $('[data-tab-content]').addClass('hidden');
+    $('[data-tab-content=' + $(this).data('tab-head') + ']').removeClass('hidden');
   }).first().click();
 
   $('[data-url]').on('click', function(){
     window.location.href = $(this).data('url')
   })
+
+  setTimeout(function(){$('[data-tab-content]').addClass('animated')}, 1)
 
 }

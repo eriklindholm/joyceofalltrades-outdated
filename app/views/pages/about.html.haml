@@ -23,11 +23,11 @@
         %p.no_margin
           Joyce of all Trades is a Norwich-based studio, founded by Joyce in 2015 following her graduation from
           = link_to 'Norwich University of the Arts', 'http://www.nua.ac.uk/'
-          \. Joyce has a degree in Graphic Design, specialising in Design for Publishing and has worked extensively with a wide range of industries since. She collaborates closely with a like-minded group of creative professionals, offering decades of experience combined with a fresh approach. Together the studio has worked with clients from academia, lifestyle brands, financial services, charities and several up and coming entrepreneurs. 
+          \. Joyce has a degree in Graphic Design, specialising in Design for Publishing and has worked extensively with a wide range of industries since. She collaborates closely with a like-minded group of creative professionals, offering decades of experience combined with a fresh approach. Together the studio has worked with clients from academia, lifestyle brands, financial services, charities and several up and coming entrepreneurs.
         %p.no_margin
           Want to know more? Check out our past
           = link_to 'projects', projects_path
-          or 
+          or
           = link_to 'get in touch', new_enquiry_path
           to find out what we can do for you.
 
@@ -64,9 +64,17 @@
 
     .main
       #about_services
+        .about_service_links_shape
+          = image_tag 'WhiteRock_outline'
         = link_to 'Graphic Design', 'javascript: void 0;', data: {tab_head: 'graphic_design'}
+        .about_accordian{data: {tab_content: 'graphic_design'}}
+          %p We design websites, print publications and visual identities that will help your brand to leave a memorable mark. We will help you make your brand come alive.
         = link_to 'Image Making', 'javascript: void 0;', data: {tab_head: 'image_making'}
+        .about_accordian{data: {tab_content: 'image_making'}}
+          %p We deliver illustrations that can work within your context or as a stand alone piece. We love to create bespoke imagery and textures for the projects that we work on, be it editorial or infographics.
         = link_to 'Art Direction', 'javascript: void 0;', data: {tab_head: 'art_direction'}
+        .about_accordian{data: {tab_content: 'art_direction'}}
+          %p Photography and film are powerful ways to tell your story and/or define the voice of your brand. We collaborate with photographers and videographers to bring your vision to life creatively.
 
     .right_column{data: {tab_content: 'graphic_design'}}
       %h3 Graphic Design

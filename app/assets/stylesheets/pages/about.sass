@@ -16,19 +16,42 @@
       +flex-direction(column)
       .left_column, .right_column
         margin-top: 30px !important
-      .left_column
-        position: absolute
-        top: 0
+        +flex(0!important)
+        +justify-content(space-between)
+        @media screen and (min-width: 420px)
+          +flexbox
+        .who_we_are
+          margin-top: 0
+          text-align: right
+          padding-left: 15px
+          h3::after
+            margin-left: auto
+
+      .right_column
+        div:nth-child(2)
+          text-align: center
+          h3::after
+            margin: 0 auto
+        div:nth-child(1)
+          text-align: left
+          h3::after
+            margin-right: auto
+            margin-left: 0
+
+        @media screen and (max-width: 500px)
+          +flex-direction(column)
+          >div
+            text-align: left !important
+            h3::after
+              margin-right: auto !important
+              margin-left: 0 !important
 
       .right_column
         text-align: right
-        +order(2)
         h3:after
           margin-left: auto
-        
-      .main
-        +order(3)
-        
+
+
     @media screen and (max-width: 500px)
       margin: 0px auto 0
 
@@ -79,11 +102,36 @@
         margin: 25px auto
 
   .right_column
+    @media screen and (max-width: 850px)
+      display: none
     p
       list-style: none
       font-family: pressura
       line-height: 1.7rem
       font-size: 1rem
 
+  .left_column
+    margin-top: 0 !important
+    margin-bottom: 40px
+
+.about_service_links_shape
+  position: absolute
+  z-index: -1
+  top: -80px
+  width: 340px
+  left: calc( 50% - 170px )
 
 
+.about_accordian
+  max-width: 500px
+  margin: 0 auto
+  max-height: 300px
+  overflow: hidden
+  @media screen and (min-width: 851px)
+    display: none
+  &.hidden
+    display: block
+    max-height: 0
+
+  &.animated
+    transition: 0.3s
